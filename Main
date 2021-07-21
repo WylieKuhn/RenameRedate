@@ -11,6 +11,7 @@ day = day.strftime('%A')
 
 #Renames all the files as the original file name with the day appended to the front
 for file in oldFiles.iterdir():
+
     #Check if the file is a file and not a folder
     if file.is_file():
         directory = file.parent
@@ -28,9 +29,11 @@ for file in oldFiles.iterdir():
         new_path = oldFiles.joinpath(date)
         if not new_path.exists():
             new_path.mkdir()
+            
         #Moves the file
         new_file_path = new_path.joinpath(new_name)
         shutil.copy2(file, new_file_path)
         print("Successfully Renamed " + str(new_name) + " And Moved It To " + str(new_path))
+        
     else:
         continue
