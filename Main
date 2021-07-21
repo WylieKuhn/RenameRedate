@@ -2,9 +2,8 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 
-
-oldFiles = Path(r'C:\Users\wylie\Desktop\New folder')
-target = Path(r'C:\Users\wylie\Desktop\New folder')
+oldFiles = Path('PATH')
+target = Path('PATH')
 
 #Gets the name of the current day and converts it to a string
 day = datetime.now()
